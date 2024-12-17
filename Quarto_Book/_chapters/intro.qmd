@@ -1,0 +1,17 @@
+# Introduction
+
+TBD
+
+But here a couple of citations for temporary testing. With a citation inserted from Zotero and in the references.bib file and a .csl file defining the citation style.. The citation to test [@spiegel2012] so lets see how it looks. or with @spiegel2012 to see the full. And in text mode [@hankin2024]
+
+The report is structured into the following sections:
+
+-   Summary
+-   xxx
+-   xxx
+-   Conclusions
+
+## Approach
+
+TBD
+
