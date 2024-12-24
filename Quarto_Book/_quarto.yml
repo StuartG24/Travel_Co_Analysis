@@ -11,6 +11,7 @@ book:
   chapters:
     - index.qmd             # Have to have this index.qmd, rest can be .ipynb or .qmd .... use it as a summary
     - _chapters/intro.qmd
+    - _chapters/occupancy_forecasting.qmd
     - _chapters/references.qmd
   appendices:
     - _chapters/appendix_a.qmd
