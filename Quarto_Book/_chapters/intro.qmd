@@ -1,17 +1,31 @@
 # Introduction
 
-TBD
+## Background & Approach
 
-But here a couple of citations for temporary testing. With a citation inserted from Zotero and in the references.bib file and a .csl file defining the citation style.. The citation to test [@spiegel2012] so lets see how it looks. or with @spiegel2012 to see the full. And in text mode [@hankin2024]
+The travel conglomerate V.Ger Travel (VGT) has a broad range of operations, including hotels, resorts, car rentals and also air travel through charter flights. Travel bookings originate primarily from VG's own travel web site which is supported by several operational information systems that cover all aspects of it's business from customer relations through to logistics and maintenance. There is a wealth of data available with over 10 years history of travel bookings, however, the use of modern Data Science methods to harness this data is in its infancy at VGT.
 
-The report is structured into the following sections:
+This report describes the recommendations of the new Chief Data Officer (CDO) as to how to implement modern Data Science techniques to utilise VGT's data to improve its efficiency and profit. Having completed an initial high level review, two opportunity areas where identified that appeared to offer the biggest opportunities for increasing efficiency and also that are achievable as a first step in implementing new techniques. The two use cases are:
 
--   Summary
--   xxx
--   xxx
--   Conclusions
+-   Hotel Demand Forecasting
+-   Customer Satisfaction & Loyalty
 
-## Approach
+Each of these use cases are explored in the following sections, each of which describes:
 
-TBD
+-   Business Scope & Benefits - What is proposed and why is this helpful
+-   Data Analysis Approach - The suggested analysis techniques and the data required
+-   Simulated Data Analysis - An example of the analysis using simulated data
+-   Conclusions & Next Steps - Findings and how to move forward
 
+***????? - Assumptions made about data prep/data wrangling .. eg normalisation of data etc - Any assumptions about company size, number of hotels etc ????***
+
+## Results & Further Details
+
+A summary of the approach taken and key results of the analysis are described for each use case in the individual sections of this report. Full details of the approach are also detailed in:
+
+-   Apendices - Step by step approach, with data tables and plots
+-   Jupyter Notebooks - Full listings of Python code and results in [GitHub Repository](https://github.com/StuartG24/Travel_Co_Analysis "GitHub")
+-   Data Files - Generated CSV files in [GitHub Repository](https://github.com/StuartG24/Travel_Co_Analysis "GitHub")
+
+## Conclusions
+
+***???? ConclusionshHere as well as last past of each use case ????***

@@ -1,3 +1,0 @@
-# Demand Forecasting & Revenue Management
-
--   Several different approaches have been taken to forecast occupancy ..... and an approach using SARIMA was found to be relatively accurate [@phumchusri2023] .....
