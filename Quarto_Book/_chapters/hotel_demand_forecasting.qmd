@@ -99,10 +99,25 @@ Occupancy forecasting using ARIMA using factors such as room capacity and market
 
 ## Simulated Data Analysis
 
-### Execution - Data Simulation
+### Data Summary
 
--   Create the data as defined above
--   Describe it, visualise it ....
+A dataset was created to simulate the data as defined in the earlier section. The first few elements of the loaded data:
+
+{{< embed ../../Notebooks_Data_Analysis/demand_analysis.ipynb#csv_file_summary >}}
+
+And details of the data types:
+
+{{< embed ../../Notebooks_Data_Analysis/demand_analysis.ipynb#csv_file_types >}}
+
+And key descriptive statistics:
+
+{{< embed ../../Notebooks_Data_Analysis/demand_analysis.ipynb#csv_file_statistics >}}
+
+### Time Series Characteristics
+
+The occupancy time series for the two categories of room are shown in the figure below. This indicates that the occupancy has a strong seasonality with an annual peak and trough; there are also regular spikes to full capacity bookings. The premium room occupancy hits maximum and zero occupancy frequently.
+
+{{< embed ../../Notebooks_Data_Analysis/demand_analysis.ipynb#generated_time_series >}}
 
 ### Execution - Data Analysis
 

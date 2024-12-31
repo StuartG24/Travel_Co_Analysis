@@ -1,11 +1,3 @@
 # Test Appendix A
 
 This is a test appendix
-
-
-
-{{< embed ../../Notebooks_Data_Analysis/demand_analysis.ipynb#generated_time_series >}}
-
-Another one
-
-{{< embed ../../Notebooks_Data_Analysis/demand_analysis.ipynb#lag_plots >}}
