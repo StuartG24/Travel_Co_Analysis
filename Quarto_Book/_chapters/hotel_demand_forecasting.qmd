@@ -115,14 +115,30 @@ And key descriptive statistics:
 
 ### Time Series Characteristics
 
-The occupancy time series for the two categories of room are shown in the figure below. This indicates that the occupancy has a strong seasonality with an annual peak and trough; there are also regular spikes to full capacity bookings. The premium room occupancy hits maximum and zero occupancy frequently.
+The occupancy time series for the two categories of room are shown in the figure below. This indicates that the occupancy has a strong seasonality with an annual peak and trough; there are also regular spikes to full capacity bookings. The premium room occupancy hits maximum and zero occupancy on several occasions.
 
 {{< embed ../../Notebooks_Data_Analysis/demand_analysis.ipynb#generated_time_series >}}
+
+The two occupancy time series were examined further (see details at the appendix) using lag plots, ACF plots and ADF tests which indicated autocorrelation, annual seasonality and a positive trend. Differencing was also completed to confirm non-stationarity. Finaly a decomposition was completed and this confirmed the seasonality and trend, see the figure below.
+
+{{< embed ../../Notebooks_Data_Analysis/demand_analysis.ipynb#decomposition >}}
+
+### OLS Linear Regression
+
+Given the strong seasonality, linear regression is unlikely to be a good model for forecasting, however a regression fit was calculated to double-check. See the figure below which shows that the fit lines could not reliably provide a forecast and even show a downaward trend. And the Durban Watsosn statistics are less than 2 which confirms evidence of autocorrelation.
+
+{{< embed ../../Notebooks_Data_Analysis/demand_analysis.ipynb#ols_regression >}}
+
+### ARIMA, SARIMA
+
+### SARIMAX
 
 ### Execution - Data Analysis
 
 -   Use simulated data to carry out analysis
 -   Show the results, forecasts ....
+
+-   ***?? carry out PACF to determine the autoregressive order for ARIMA etc***
 
 ## Conclusions & Next Steps
 
