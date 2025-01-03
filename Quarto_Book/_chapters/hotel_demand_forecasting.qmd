@@ -136,6 +136,7 @@ Given the strong seasonality, linear regression is unlikely to be a good model f
 ### Execution - Data Analysis
 
 -   Use simulated data to carry out analysis
+
 -   Show the results, forecasts ....
 
 -   ***?? carry out PACF to determine the autoregressive order for ARIMA etc***
