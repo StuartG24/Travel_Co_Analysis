@@ -101,13 +101,13 @@ Occupancy forecasting using ARIMA using factors such as room capacity and market
 
 ### Data Summary
 
-A dataset was created to simulate the data as defined in the earlier section. The first few elements of the loaded data:
-
-{{< embed ../../Notebooks_Data_Analysis/demand_analysis.ipynb#csv_file_summary >}}
-
-And details of the data types:
+A dataset was created to simulate the data as defined in the earlier section. The data elements consist of:
 
 {{< embed ../../Notebooks_Data_Analysis/demand_analysis.ipynb#csv_file_types >}}
+
+The first few elements of the loaded data:
+
+{{< embed ../../Notebooks_Data_Analysis/demand_analysis.ipynb#csv_file_summary >}}
 
 And key descriptive statistics:
 

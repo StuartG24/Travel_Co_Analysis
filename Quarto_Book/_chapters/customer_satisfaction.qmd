@@ -1,1 +1,18 @@
 # Customer Satisfaction & Loyalty
+
+
+## Simulated Data Analysis
+
+### Data Summary
+
+A dataset was created to simulate the data as defined in the earlier section. The data elements consist of:
+
+{{< embed ../../Notebooks_Data_Generation/customer_satisfaction_generation.ipynb#csv_file_types >}}
+
+The first few elements of the loaded data:
+
+{{< embed ../../Notebooks_Data_Generation/customer_satisfaction_generation.ipynb#csv_file_summary >}}
+
+And key descriptive statistics:
+
+{{< embed ../../Notebooks_Data_Generation/customer_satisfaction_generation.ipynb#csv_file_statistics >}}
