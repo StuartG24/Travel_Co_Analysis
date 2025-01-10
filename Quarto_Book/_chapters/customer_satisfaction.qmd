@@ -1,5 +1,8 @@
 # Customer Satisfaction & Loyalty
 
+## Business Scope & Benefits
+
+## Data Analysis Approach
 
 ## Simulated Data Analysis
 
@@ -7,12 +10,19 @@
 
 A dataset was created to simulate the data as defined in the earlier section. The data elements consist of:
 
-{{< embed ../../Notebooks_Data_Generation/customer_satisfaction_generation.ipynb#csv_file_types >}}
 
 The first few elements of the loaded data:
 
-{{< embed ../../Notebooks_Data_Generation/customer_satisfaction_generation.ipynb#csv_file_summary >}}
+
 
 And key descriptive statistics:
 
-{{< embed ../../Notebooks_Data_Generation/customer_satisfaction_generation.ipynb#csv_file_statistics >}}
+### XGBoost ....
+
+## Conclusions & Next Steps
+
+### Findings
+
+### Next Steps
+
+
