@@ -1,5 +1,12 @@
 # Introduction
 
+## TO DO
+  appendices:
+  
+    - _chapters/appendix_demand.qmd
+    - _chapters/appendix_customer_satisfaction.qmd
+    - _chapters/appendix_sarima.qmd
+
 ## Background & Approach
 
 The travel conglomerate V.Ger Travel (VGT) has a broad range of operations, including hotels, resorts, car rentals and also air travel through charter flights. Travel bookings originate primarily from VG's own travel web site which is supported by several operational information systems that cover all aspects of it's business from customer relations through to logistics and maintenance. There is a wealth of data available with over 10 years history of travel bookings, however, the use of modern Data Science methods to harness this data is in its infancy at VGT.

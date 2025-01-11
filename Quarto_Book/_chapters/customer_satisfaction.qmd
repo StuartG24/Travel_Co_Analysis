@@ -78,6 +78,10 @@ blh blh blah
 
 {{< embed ../../Notebooks_Data_Analysis/customer_satisfaction.ipynb#feature-importance >}}
 
+more waffle
+
+{{< embed ../../Notebooks_Data_Analysis/customer_satisfaction.ipynb#feature-table >}}
+
 
 Evaluation of model : <https://www.datacamp.com/blog/classification-machine-learning>
 
