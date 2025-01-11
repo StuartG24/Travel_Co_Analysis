@@ -111,7 +111,7 @@ The first few elements of the loaded data:
 
 And key descriptive statistics:
 
-{{< embed ../../Notebooks_Data_Analysis/demand_analysis.ipynb#csv_file_statistics >}}
+{{< embed ../../Notebooks_Data_Analysis/demand_analysis.ipynb#csv_file_stats >}}
 
 ### Time Series Characteristics
 

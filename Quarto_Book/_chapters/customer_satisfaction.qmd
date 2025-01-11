@@ -1,4 +1,4 @@
-# Customer Satisfaction & Loyalty
+# Customer Satisfaction
 
 ## Business Scope & Benefits
 
@@ -24,24 +24,21 @@ In a similar way to Demand Forecasting, VGT does not currently formally analyse 
 
 The objective of this first step is to establish a process that can utilise existing historical customer review data for a single hotel and create an IS-Model from which to determine actions to improve customer satisfaction. In summary, the approach is to:
 
--   Collate customer details and satisfaction ratings;
+-   Collate customer details and satisfaction ratings
 -   ***?? sentiment analysis ??***
--   Utilise these to identify what are the areas that customers regard as important;
--   Establish a CSAT prediction model;
--   Combine the above to create an IS-Model for historic data and also for prediction;
+-   Utilise these to identify what are the areas that customers regard as important
+-   Establish a CSAT prediction model
+-   Combine the above to create an IS-Model for historic data and also for prediction
 -   Use the IS-Model to identify actions to take to improve customer service.
 
 ### Data Required
 
 The scope of the data is all the historical customer satisfaction ratings that VGT customers have provided after staying at a hotel. For consistency a Customer Satisfaction Score (CSAT) will be used, this is a 5 point Likert scale from "very dissatisfied" to "very satisfied" [@bishop2022]. Data points required are:
 
--   Overall customer rating;
--   Customer demographics (Age, Gender, Residence);
--   Trip Background (Purpose, Travel Type, Booking Type);
+-   Overall customer rating
+-   Customer demographics (Age, Gender, Residence)
+-   Trip Background (Purpose, Travel Type, Booking Type)
 -   Individual service ratings (Amenities, Staff, Cleanliness, Wifi etc).
--   What is the target, objective on how to use the analysis
--   what is the data required
--   Weight the factors ......
 
 ***?? use importance ranking on page 357 as a starting point for analysis .. refine later by each hotel's management team***
 
@@ -65,11 +62,22 @@ Potential classification approaches for multi-class classification include ***!!
 
 A dataset was created to simulate the data as defined in the earlier section. The data elements consist of:
 
+{{< embed ../../Notebooks_Data_Analysis/customer_satisfaction.ipynb#csv_file_types >}}
+
 The first few elements of the loaded data:
+
+{{< embed ../../Notebooks_Data_Analysis/customer_satisfaction.ipynb#csv_file_summary >}}
 
 And key descriptive statistics:
 
+{{< embed ../../Notebooks_Data_Analysis/customer_satisfaction.ipynb#csv_file_stats >}}
+
 ### XGBoost ....
+
+blh blh blah
+
+{{< embed ../../Notebooks_Data_Analysis/customer_satisfaction.ipynb#feature-importance >}}
+
 
 Evaluation of model : <https://www.datacamp.com/blog/classification-machine-learning>
 

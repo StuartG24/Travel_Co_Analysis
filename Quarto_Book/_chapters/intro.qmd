@@ -7,7 +7,7 @@ The travel conglomerate V.Ger Travel (VGT) has a broad range of operations, incl
 This report describes the recommendations of the new Chief Data Officer (CDO) as to how to implement modern Data Science techniques to utilise VGT's data to improve its efficiency and profit. Having completed an initial high level review, two opportunity areas where identified that appeared to offer the biggest opportunities for increasing efficiency and also that are achievable as a first step in implementing new techniques. The two use cases are:
 
 -   Hotel Demand Forecasting
--   Customer Satisfaction & Loyalty
+-   Customer Satisfaction
 
 Each of these use cases are explored in the following sections, each of which describes:
 
