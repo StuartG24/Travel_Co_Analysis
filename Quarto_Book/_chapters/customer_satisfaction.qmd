@@ -2,7 +2,37 @@
 
 ## Business Scope & Benefits
 
+For the hotel business within VGT, customer satisfaction
+
+[@li2013]
+
+-   why is customer satisfaction important?
+
+-   how can it help profit and efficiency?
+
+-   how can it be linked to loyalty?
+
+-   find some references about it?
+
+-   what are some key factors in customer satisfaction, eg cleanliness, local sites etc
+
+-   What are the tangible business benefits, find some evidence to back up
+
 ## Data Analysis Approach
+
+-   Simialrly to the forecasting use-case keep it simple, start easy, simple
+
+### Model xx & Data Required
+
+-   What is the target, objective on how to use the analysis
+
+-   what is the data required
+
+### Techniques Considered
+
+-   what models appropriate ... classification models and pros/cons
+-   some references to support
+-   and why XGBoost ..... advantages for VGT of this model
 
 ## Simulated Data Analysis
 
@@ -10,10 +40,7 @@
 
 A dataset was created to simulate the data as defined in the earlier section. The data elements consist of:
 
-
 The first few elements of the loaded data:
-
-
 
 And key descriptive statistics:
 
@@ -24,5 +51,3 @@ And key descriptive statistics:
 ### Findings
 
 ### Next Steps
-
-
