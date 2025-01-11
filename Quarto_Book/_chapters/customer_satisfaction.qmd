@@ -2,37 +2,62 @@
 
 ## Business Scope & Benefits
 
-For the hotel business within VGT, customer satisfaction
+For the hotel operations within VGT, customer satisfaction is an important contributor to the overall efficiency and profitability of their business. This has been recognised by the hotel industry for several years: *"Service quality and customer satisfaction have gradually been recognized as key factors used to gain competitive advantage and customer retention"* [@yang2011]. If the levels of satisfaction across different aspects of a customers experience can be quantified, then action can be focused on improving those areas that are lacking. Clearly, identifying the areas that contribute most is part of the challenge. Not surprisingly, the use of data science to assist in this area is increasingly important [@zarezadeh2022].
 
-[@li2013]
+### Measuring Customer Satisfaction
 
--   why is customer satisfaction important?
+There are several aspects to quantifying customer satisfaction, for example:
 
--   how can it help profit and efficiency?
+-   The specific areas of interest. Such as cleanliness, service experience, quality of facilities, local amenities and even things such as wifi availability;
+-   Customer satisfaction ranking. Obtaining a customer's views on how poor to excellent a specific area was;
+-   Importance to the business. The appropriate weighting of the importance of each area.
 
--   how can it be linked to loyalty?
+It has become standard practice and easy to gather customer feedback on how they rate their experience after a stay at a hotel [@li2013] through check-out questionnaires and feedback requests, and also increasingly utilising reviews in services such as [Booking.Com](https://www.booking.com) and as [Tripadvisor](https://www.tripadvisor.co.uk). VGT already has some feedback mechanisms and some historical customer satisfaction data that can be used initially.
 
--   find some references about it?
+Previous studies have looked at a way of pulling the above aspects together and an example is the use of an interesting matrix, an "I-S Model" [@yang2011], see an example at @fig-IS-Example. This categorises the areas of interest and helps highlight those areas performing well and those not, whilst also reflecting their importance to the business. In particular, areas in the "To-be-improved" quadrant are important but have not met customer expectations and so these are areas that a hotel's management team can focus on to improve the business.
 
--   what are some key factors in customer satisfaction, eg cleanliness, local sites etc
-
--   What are the tangible business benefits, find some evidence to back up
+![Example of an Importance-Satisfaction Model](images/Screenshot%202025-01-11%20at%2013.31.14.png){#fig-IS-Example fig-align="center" width="75%"}
 
 ## Data Analysis Approach
 
--   Simialrly to the forecasting use-case keep it simple, start easy, simple
+In a similar way to Demand Forecasting, VGT does not currently formally analyse the experience of its customers across all hotels and then use this to inform management actions to improve its services. However, VGT does have a good history of customer ratings data that can be utilised initially to experiment with ways of more formally measuring customer satisfaction. If positive, then this can then be extended in sophistication and scope of data collection (see @sec-custnextsteps).
 
-### Model xx & Data Required
+The objective of this first step is to establish a process that can utilise existing historical customer review data for a single hotel and create an IS-Model from which to determine actions to improve customer satisfaction. In summary, the approach is to:
 
+-   Collate customer details and satisfaction ratings;
+-   ***?? sentiment analysis ??***
+-   Utilise these to identify what are the areas that customers regard as important;
+-   Establish a CSAT prediction model;
+-   Combine the above to create an IS-Model for historic data and also for prediction;
+-   Use the IS-Model to identify actions to take to improve customer service.
+
+### Data Required
+
+The scope of the data is all the historical customer satisfaction ratings that VGT customers have provided after staying at a hotel. For consistency a Customer Satisfaction Score (CSAT) will be used, this is a 5 point Likert scale from "very dissatisfied" to "very satisfied" [@bishop2022]. Data points required are:
+
+-   Overall customer rating;
+-   Customer demographics (Age, Gender, Residence);
+-   Trip Background (Purpose, Travel Type, Booking Type);
+-   Individual service ratings (Amenities, Staff, Cleanliness, Wifi etc).
 -   What is the target, objective on how to use the analysis
-
 -   what is the data required
+-   Weight the factors ......
 
-### Techniques Considered
+***?? use importance ranking on page 357 as a starting point for analysis .. refine later by each hotel's management team***
 
--   what models appropriate ... classification models and pros/cons
--   some references to support
--   and why XGBoost ..... advantages for VGT of this model
+### Classification Techniques to Determine Importance
+
+The aim is to use a classification model to determine how the different factors contribute to the overall customer rating. The target variable 'y' is the overall CSAT and the input feature set 'X' are the demographics, trip background and individual service ratings. The created model will provide an initial indication of the relative importance across the feature set. ***!! Find some references for all this !!.*** The model can then also be used to provide predictions of the CSAT in response to changing the feature set and this can help hotel management teams focus in planning what actions to take to improve customer service
+
+Potential classification approaches for multi-class classification include ***!! references !!***:
+
+-   K-Nearest Neighbors - non-parametric classification algorithms, classifying unknown examples based on the most represented class among k nearest neighbour
+-   Decision Trees: Powerful classification techniques that can naturally handle multi-class problems by inferring splits in the training data based on feature values
+-   Gradient Boosting.
+
+***!! Summary of pros / cons of each !!***
+
+***!! Why XFGBoost - its specific advantages !!***
 
 ## Simulated Data Analysis
 
@@ -46,8 +71,28 @@ And key descriptive statistics:
 
 ### XGBoost ....
 
-## Conclusions & Next Steps
+Evaluation of model : <https://www.datacamp.com/blog/classification-machine-learning>
+
+SHAP: <https://www.datacamp.com/tutorial/introduction-to-shap-values-machine-learning-interpretability>
+
+## Conclusions & Next Steps {#sec-custnextsteps}
 
 ### Findings
 
 ### Next Steps
+
+Use the Model / Predictions / Business Use
+
+-   ***?! More processing capacity***
+-   Look at action areas
+-   Change feature values and consider impact on overall CSAT
+-   Monitor changes and impact on scores etc
+-   Extend to hotels
+-   ***?? Find a way to plot over time eg @yang2011 improvement index, p 353***
+
+Modelling Improvements / Refine
+
+-   additional customer features that might be useful
+-   Enhance customer collection approach, standardise across hotels
+-   third-party / other hotels to help rank importance and provide a comparative/competitor scoring/comparison ... Having utilised its own internal data on customer reviews, VGT will be like much of the hotel industry in not significantly incorporating third-party review data from sources such as [Tripadvisor](https://www.tripadvisor.co.uk) and a next-step is to investigate how to extract, analyse and incorporate this data [@park2023].
+-   compare across hotels and also competitors for satisfaction factors etc
