@@ -17,6 +17,7 @@ book:
     - _chapters/references.qmd
   appendices:
     - _chapters/appendix_demand.qmd
+    - _chapters/appendix_customer_satisfaction.qmd
 
 bibliography: references.bib
 csl: harvard-cite-them-right.csl

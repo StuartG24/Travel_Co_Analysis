@@ -8,13 +8,13 @@ For the hotel operations within VGT, customer satisfaction is an important contr
 
 There are several aspects to quantifying customer satisfaction, for example:
 
--   The specific areas of interest. Such as cleanliness, service experience, quality of facilities, local amenities and even things such as wifi availability;
--   Customer satisfaction ranking. Obtaining a customer's views on how poor to excellent a specific area was;
+-   The specific areas of interest. Such as cleanliness, service experience, quality of facilities, local amenities and even things such as wifi availability
+-   Customer satisfaction ranking. Obtaining a customer's views on how poor to excellent a specific area was
 -   Importance to the business. The appropriate weighting of the importance of each area.
 
-It has become standard practice and easy to gather customer feedback on how they rate their experience after a stay at a hotel [@li2013] through check-out questionnaires and feedback requests, and also increasingly utilising reviews in services such as [Booking.Com](https://www.booking.com) and as [Tripadvisor](https://www.tripadvisor.co.uk). VGT already has some feedback mechanisms and some historical customer satisfaction data that can be used initially.
+It has become standard practice and easy to gather customer feedback on how they rate their experience after a stay at a hotel through check-out questionnaires and feedback requests [@li2013], and also increasingly utilising reviews in services such as [Booking.Com](https://www.booking.com) and as [Tripadvisor](https://www.tripadvisor.co.uk). VGT already has some feedback mechanisms and some historical customer satisfaction data that can be used initially.
 
-Previous studies have looked at a way of pulling the above aspects together and an example is the use of an interesting matrix, an "I-S Model" [@yang2011], see an example at @fig-IS-Example. This categorises the areas of interest and helps highlight those areas performing well and those not, whilst also reflecting their importance to the business. In particular, areas in the "To-be-improved" quadrant are important but have not met customer expectations and so these are areas that a hotel's management team can focus on to improve the business.
+Previous studies have looked at a way of pulling the above aspects together and an example is the use of a matrix, an "I-S Model" [@yang2011], see an example at @fig-IS-Example. This categorises the areas of interest and helps highlight those areas performing well and those not, whilst also reflecting their importance to the business. In particular, areas in the "To-be-improved" quadrant are important but have not met customer expectations and so these are areas that a hotel's management team can focus on to improve the business.
 
 ![Example of an Importance-Satisfaction Model](images/Screenshot%202025-01-11%20at%2013.31.14.png){#fig-IS-Example fig-align="center" width="75%"}
 
@@ -22,14 +22,13 @@ Previous studies have looked at a way of pulling the above aspects together and 
 
 In a similar way to Demand Forecasting, VGT does not currently formally analyse the experience of its customers across all hotels and then use this to inform management actions to improve its services. However, VGT does have a good history of customer ratings data that can be utilised initially to experiment with ways of more formally measuring customer satisfaction. If positive, then this can then be extended in sophistication and scope of data collection (see @sec-custnextsteps).
 
-The objective of this first step is to establish a process that can utilise existing historical customer review data for a single hotel and create an IS-Model from which to determine actions to improve customer satisfaction. In summary, the approach is to:
+The objective of this initial experimentation step is to establish a process that can utilise existing historical customer review data for a single hotel and create an IS-Model to determine possible actions. In summary, the approach is to:
 
 -   Collate customer details and satisfaction ratings
--   ***?? sentiment analysis ??***
 -   Utilise these to identify what are the areas that customers regard as important
 -   Establish a CSAT prediction model
 -   Combine the above to create an IS-Model for historic data and also for prediction
--   Use the IS-Model to identify actions to take to improve customer service.
+-   Use the IS-Model to identify actions that can improve customer service.
 
 ### Data Required
 
@@ -40,21 +39,20 @@ The scope of the data is all the historical customer satisfaction ratings that V
 -   Trip Background (Purpose, Travel Type, Booking Type)
 -   Individual service ratings (Amenities, Staff, Cleanliness, Wifi etc).
 
-***?? use importance ranking on page 357 as a starting point for analysis .. refine later by each hotel's management team***
-
 ### Classification Techniques to Determine Importance
 
-The aim is to use a classification model to determine how the different factors contribute to the overall customer rating. The target variable 'y' is the overall CSAT and the input feature set 'X' are the demographics, trip background and individual service ratings. The created model will provide an initial indication of the relative importance across the feature set. ***!! Find some references for all this !!.*** The model can then also be used to provide predictions of the CSAT in response to changing the feature set and this can help hotel management teams focus in planning what actions to take to improve customer service
+The aim is to use a classification model to determine how the different factors contribute to the overall customer rating, ie to determine the relative importance of each factor. The target variable 'y' is the overall CSAT and the input feature set 'X' consists of the demographics, trip background and individual service ratings. The created model will provide an initial indication of the relative importance across the feature set. The model can then also be used to provide predictions of the CSAT in response to value changes for individual features and this can help hotel management teams focus in planning what actions to take to improve customer service
 
-Potential classification approaches for multi-class classification include ***!! references !!***:
+Potential classification approaches for multi-class classification include:
 
--   K-Nearest Neighbors - non-parametric classification algorithms, classifying unknown examples based on the most represented class among k nearest neighbour
--   Decision Trees: Powerful classification techniques that can naturally handle multi-class problems by inferring splits in the training data based on feature values
--   Gradient Boosting.
+-   Support Vector Machine (SVM)
+-   K-Nearest Neighbour (KNN)
+-   Naive Bayes (NB)
+-   Decision Tree (DT)
+-   Random Forest (RF)
+-   Extreme Gradient Boosting (XGBoost).
 
-***!! Summary of pros / cons of each !!***
-
-***!! Why XFGBoost - its specific advantages !!***
+A comparison of the classification of customer reviews, [@noori2021], examined several models, including: SVM, KNN, NB, DT; a DT approach was found to be the most accurate. Another examination of how to identify the important predictors of customer reviews found DT to be an accurate approach[@baouchi2018]. Extending the DT approach, XGBoost has found to be a successful model in many situations [@chen2016]. In this initial examination, XGBoost was used.
 
 ## Simulated Data Analysis
 
@@ -72,20 +70,27 @@ And key descriptive statistics:
 
 {{< embed ../../Notebooks_Data_Analysis/customer_satisfaction.ipynb#csv_file_stats >}}
 
-### XGBoost ....
+### XGBoost Model Creation & Evaluation
 
-blh blh blah
+An XGBoost model was created using the above dataset randomly split 80:20 into training and testing data. The initial model was evaluated and a Confusion Matrix, Shap Values and F-Score were generated. The F-Score of 52% was not high whcih indicates the prediction are not very accurate and so more hyper-parameter tuning will be required; however, as an initial examination the model was used.
+
+The relative feature importance ranking was calculated, shown in the figure below. Age clearly has a much larger importance than any of the other features.
 
 {{< embed ../../Notebooks_Data_Analysis/customer_satisfaction.ipynb#feature-importance >}}
 
-more waffle
+It is useful to see what customer demographic factors and travel type impact the overall CSAT, however these can not be directly changed by the hotel's management team, so a second model was generated using just the individual service scores and this feature importance ranking is shown in the figure below. There is a closer spread of importance, with wifi and transport being the most important.
+
+{{< embed ../../Notebooks_Data_Analysis/customer_satisfaction.ipynb#feature-importance-scores >}}
+
+### I-S Model
+
+Using the predicted feature rankings, an I-S Model can be compared, and an I-S Model created.
 
 {{< embed ../../Notebooks_Data_Analysis/customer_satisfaction.ipynb#feature-table >}}
 
+{{< embed ../../Notebooks_Data_Analysis/customer_satisfaction.ipynb#feature-table-data >}}
 
-Evaluation of model : <https://www.datacamp.com/blog/classification-machine-learning>
-
-SHAP: <https://www.datacamp.com/tutorial/introduction-to-shap-values-machine-learning-interpretability>
+\clearpage
 
 ## Conclusions & Next Steps {#sec-custnextsteps}
 
