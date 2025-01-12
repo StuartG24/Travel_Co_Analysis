@@ -1,7 +1,5 @@
-# Hotel Demand Forecasting - Jupyter Notebook Output
+# Hotel Demand Forecasting - Jupyter Notebook Output {#sec-Demand_Appendix}
 
 {{< embed ../../Notebooks_Data_Analysis/demand_analysis.ipynb >}}
 
 {{< embed ../../Notebooks_Data_Analysis/demand_analysis_sarima.ipynb >}}
-
-

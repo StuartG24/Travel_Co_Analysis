@@ -2,19 +2,19 @@
 
 ## Business Scope & Benefits
 
-The hotel operations of VGT are a significant part of its business and any efficiencies in this area have the potential to make large contributions to the overall profitability of the business. The profit contribution from individual hotels can be maximised by ensuring revenue is as high as possible and at the same time minimising the hotel's operating costs. One way to do this is to provide a hotel's management team with the tools to carry out reliable demand forecasting.
+The hotel operations of VGT are a significant part of its business and any efficiencies in this area have the potential to make large contributions to overall profitability. The profit contribution from individual hotels can be maximised by ensuring revenue is as high as possible whilst at the same time minimising a hotel's operating costs. One way to do this is to provide a hotel's management team with the tools to carry out reliable demand forecasting.
 
 Hotel demand forecasting is the prediction of the demand for rooms and related hotel services to help a hotel's management team determine pricing, staffing and marketing strategies [@johansson2022]. If the demand for hotel rooms can be reliably forecast then this enables:
 
--   Dynamic Pricing - Adjust future prices in response to forecast demand. When high demand is expected then future room rates can be increased; when low demand is expected then discounts can be offered or packages can be advertised. And marketing strategies can be determined to respond to the demand forecasts. xx increase occupancy and revenue
--   Staffing Levels - Hotel staffing can be adjusted to maintain customer service levels but not over staff when demand is expected to be lower. xx control costs
--   Inventory Management - Similarly inventory can be adjusted, for example catering supplies maintained just sufficient to meet the forecast number of customers using catering facilities. xx control costs
+-   ßDynamic Pricing - Adjust future prices in response to forecast demand. When high demand is expected then future room rates can be increased; when low demand is expected then discounts can be offered or packages can be advertised. And marketing strategies can be determined to respond to the demand forecasts
+-   Staffing Levels - Hotel staffing can be adjusted to maintain customer service levels but not over staff when demand is expected to be lower
+-   Inventory Management - Similarly inventory can be adjusted, for example catering supplies maintained just sufficient to meet the forecast number of customers using catering facilities.
 
-There are many factors that will influence the demand for hotel rooms, some may remain stable whilst others are less so and will vary over time or in response to external factor, these include:
+There are many factors that will influence the demand for hotel rooms, some may remain stable whilst others are less so and will vary over time or in response to external factors, these include:
 
--   Location & Market - Is the hotel a budget or a boutique hotel? Is is in a business district, near a beach or a ski resort etc. Are customers mainly business travelers or tourists?
--   Economic - Macro level impact from the state of the economy.
--   Local Competition - Competition with local hotels.
+-   Location & Market - Is the hotel a budget or a boutique hotel? Is is in a business district, near a beach or a ski resort etc. Are customers mainly business travellers or tourists?
+-   Economic - Macro level impact from the state of the economy
+-   Local Competition - Competition with local hotels
 -   Seasonality - When are the high and low seasons? Is it a summer or a winter resort? What are the local weather patterns and seasons. Are there weather related attractions?
 -   Local Events - When are any local festivities, sports events, school holidays, religious events, music conferences, business conferences?
 
@@ -24,8 +24,8 @@ An important indicator of demand is the occupancy rate [@jeffrey1994] and [@fha2
 
 Occupancy is used alongside revenue related indicators to provide a measure of revenue health, the three main indicators (for a given time period, eg daily) are:
 
--   Occupancy Rate (OCC%) - Percentage of available rooms that are occupied, or expected to be occupied.
--   Average Daily Rate (ADR) - Average revenue per room occupied, across all room price bands.
+-   Occupancy Rate (OCC%) - Percentage of available rooms that are occupied, or expected to be occupied
+-   Average Daily Rate (ADR) - Average revenue per room occupied, across all room price bands
 -   Revenue Per Available Room (RevPAR) - Revenue reflecting all available rooms. Calculated by: OCC% \* ADR. A good overall indicator of revenue.
 
 ### Forecasting Occupancy & Business Benefits
@@ -41,7 +41,7 @@ To recap, if occupancy (and the associated revenue indicators) can be reliably f
 
 At VGT, no rigorous forecasting is currently in place so to begin with a relatively simple approach will be implemented in a small number of hotels. If the benefits of this are confirmed, then it can then be extended in sophistication using more complex forecasting models and for longer time periods. It can then be implemented across all hotels in VGT.
 
-The objective of this first step is to establish a model that can be used to forecast the daily occupancy (OCC%) at an individual hotel for the coming month, ie the forecast is for 30 to 40 days in the future. The forecast will then be used by hotel's management team to: i) adopt dynamic pricing; ii) execute supporting short-term marketing; iii) fine-tune staffing rotas and holiday leave for the coming weeks. This should improve the efficiency of the hotel's operations by increasing room bookings whilst ensuring staffing costs are controlled at an appropriate level.
+The objective of this first step is to establish a model that can be used to forecast the daily OCC% at an individual hotel for the coming month, ie the forecast is for 30 to 40 days in the future. The forecast will then be used by hotel's management team to: i) adopt dynamic pricing; ii) execute supporting short-term marketing; iii) fine-tune staffing rotas and holiday leave for the coming weeks. This should improve the efficiency of the hotel's operations by increasing room bookings whilst ensuring staffing costs are controlled at an appropriate level.
 
 ### Forecasting Model & Data Required
 
@@ -49,7 +49,7 @@ The scope of the envisaged forecasting model is to calculate a month of daily OC
 
 *Forecasting Model Data*
 
-The data required for the forecasting model is the last 4 years of daily room occupancy. In this analysis a single hotel with two classes of room (standard and premium) will be used. A 4 year history of daily room bookings was selected with 3 years used to be used for training and 1 year for validation. This length of history was chosen as a starting point because a previous occupancy study [@phumchusri2023] found that the choice could be quite dependent on the scenario; however, there needs to be a a balance of too short and missing seasonality vs too long and not being sufficiently responsive. @phumchusri2023 also found that using 4 years history of daily occupancy to forecast 2 to 8 weeks was a good approach.
+The data required for the forecasting model is the last 4 years of daily room occupancy. In this analysis a single hotel with two classes of room (standard and premium) will be used. A 4 year history of daily room bookings was selected with 3 years used for training and 1 year for validation. This length of history was chosen as a starting point because a previous occupancy study [@phumchusri2023] found that the choice could be quite dependent on the scenario; however, there needs to be a a balance of too short and missing seasonality vs too long and not being sufficiently responsive. @phumchusri2023 also found that using 4 years history of daily occupancy to forecast 2 to 8 weeks was a good approach.
 
 The specific data required is:
 
@@ -82,8 +82,7 @@ There are several potential tools that can be used with historical time series d
 
 1.  Ordinary Least Squares (OLS) linear regression
 2.  ARIMA, SARIMA - Use to fully incorporate seasonality
-3.  SAIMAX - If exogenous factors need to be accounted for
-4.  ***?? LightGBM .... if time allows!***
+3.  SARIMAX - If exogenous factors need to be accounted for
 
 #### OLS Linear Regression
 
@@ -95,21 +94,15 @@ Occupancy forecasting using ARIMA using factors such as room capacity and market
 
 #### SARIMAX
 
-#### ?? LightGBM .... if time allows!
+Due to limitations in processing capacity for daily data a SARIMAX model was not created. But see @sec-ARIMA-conclusions for next steps.
 
 ## Simulated Data Analysis
 
 ### Data Summary
 
-A dataset was created to simulate the data as defined in the earlier section. The data elements consist of:
+A dataset was created to simulate the data as defined in the earlier section. The data elements are shown in the tables below and in more detail at @sec-Demand_Appendix.
 
 {{< embed ../../Notebooks_Data_Analysis/demand_analysis.ipynb#csv_file_types >}}
-
-The first few elements of the loaded data:
-
-{{< embed ../../Notebooks_Data_Analysis/demand_analysis.ipynb#csv_file_summary >}}
-
-And key descriptive statistics:
 
 {{< embed ../../Notebooks_Data_Analysis/demand_analysis.ipynb#csv_file_stats >}}
 
@@ -119,9 +112,13 @@ The occupancy time series for the two categories of room are shown in the figure
 
 {{< embed ../../Notebooks_Data_Analysis/demand_analysis.ipynb#generated_time_series >}}
 
-The two occupancy time series were examined further (see details at the appendix) using lag plots, ACF plots and ADF tests which indicated autocorrelation, annual seasonality and a positive trend. Differencing was also completed to confirm non-stationarity. Finally a decomposition was completed and this confirmed the seasonality and trend, see the figure below.
+The two occupancy time series were examined further (see detail at @sec-Demand_Appendix) using lag plots, ACF plots and ADF tests which indicated autocorrelation, annual seasonality and a positive trend. Differencing was also completed to confirm non-stationarity. Finally a decomposition was completed and this confirmed the seasonality and trend, see the figures below for standard and premium rooms.
 
 {{< embed ../../Notebooks_Data_Analysis/demand_analysis.ipynb#decomposition >}}
+
+{{< embed ../../Notebooks_Data_Analysis/demand_analysis.ipynb#decomposition-prem >}}
+
+\clearpage
 
 ### OLS Linear Regression {#sec-plot}
 
@@ -145,7 +142,7 @@ and earlier @fig-test
 
 -   ***?? carry out PACF to determine the autoregressive order for ARIMA etc***
 
-## Conclusions & Next Steps
+## Conclusions & Next Steps {#sec-ARIMA-conclusions}
 
 ### Findings
 
