@@ -1,3 +1,9 @@
 # Summary
 
 Summary of the report
+
+## TO DO
+  appendices:
+  
+    - _chapters/appendix_sarima.qmd
+    - ?? data generation notebooks too?
