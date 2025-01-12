@@ -13,13 +13,11 @@ book:
     - _chapters/intro.qmd
     - _chapters/hotel_demand_forecasting.qmd
     - _chapters/customer_satisfaction.qmd
-    - _chapters/conclusions.qmd
     - _chapters/references.qmd
   appendices:
     - _chapters/appendix_demand.qmd
     - _chapters/appendix_customer_satisfaction.qmd
     - _chapters/appendix_sarima.qmd
-    - _chapters/appendix_data_creation.qmd
 
 bibliography: references.bib
 csl: harvard-cite-them-right.csl

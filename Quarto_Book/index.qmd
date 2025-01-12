@@ -1,9 +1,17 @@
 # Summary
 
-Summary of the report
-
 ## TO DO
   appendices:
   
     - _chapters/appendix_sarima.qmd
-    - ?? data generation notebooks too?
+
+## Approach & Findings
+
+Summary of the report, sort of abstract type summary?
+
+
+## Next Steps
+
+Summary of conclusions and next steps
+
+

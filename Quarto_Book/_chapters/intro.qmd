@@ -25,7 +25,3 @@ A summary of the approach taken and key results of the analysis are described fo
 -   Apendices - Step by step approach, with data tables and plots
 -   Jupyter Notebooks - Full listings of Python code and results in a [GitHub Repository](https://github.com/StuartG24/Travel_Co_Analysis "GitHub")
 -   Data Files - Generated CSV files in a [GitHub Repository](https://github.com/StuartG24/Travel_Co_Analysis "GitHub")
-
-## Conclusions
-
-***???? ConclusionshHere as well as last past of each use case ????***
