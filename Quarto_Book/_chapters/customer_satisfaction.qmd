@@ -58,15 +58,9 @@ A comparison of the classification of customer reviews, [@noori2021], examined s
 
 ### Data Summary
 
-A dataset was created to simulate the data as defined in the earlier section. The data elements consist of:
+A dataset was created to simulate the data as defined in the earlier section. The data elements are shown in the tables below and in more detail at @sec-Customer_Appendix.
 
 {{< embed ../../Notebooks_Data_Analysis/customer_satisfaction.ipynb#csv_file_types >}}
-
-The first few elements of the loaded data:
-
-{{< embed ../../Notebooks_Data_Analysis/customer_satisfaction.ipynb#csv_file_summary >}}
-
-And key descriptive statistics:
 
 {{< embed ../../Notebooks_Data_Analysis/customer_satisfaction.ipynb#csv_file_stats >}}
 

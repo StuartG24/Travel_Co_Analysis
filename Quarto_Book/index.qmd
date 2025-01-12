@@ -1,10 +1,5 @@
 # Summary
 
-## TO DO
-  appendices:
-  
-    - _chapters/appendix_sarima.qmd
-
 ## Approach & Findings
 
 Summary of the report, sort of abstract type summary?
