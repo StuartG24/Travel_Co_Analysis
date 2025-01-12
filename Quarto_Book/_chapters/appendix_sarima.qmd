@@ -1,4 +1,3 @@
-# SARIMA Models Creation + Auto ARIMA  - Jupyter Notebook Output
+# SARIMA Models Creation + Auto ARIMA - Jupyter Notebook Output {#sec-SARIMA_Appendix}
 
-
-
+{{< embed ../../Notebooks_Data_Analysis/SARIMA_Model_Create.ipynb >}}
