@@ -3,14 +3,13 @@ project:
 
 book:
   title: "V.Ger Travel Company - An Analysis"
-  subtitle: "ITNBD4 Assignment"
+  subtitle: "ITNPBD4 Assignment"
   author: "Student: 2710017"
   date: 13 January 2025
   date-format: "DD MMMM YYYY"
 
   chapters:
     - index.qmd             # Have to have this index.qmd, rest can be .ipynb or .qmd .... use it as a summary
-    - _chapters/intro.qmd
     - _chapters/hotel_demand_forecasting.qmd
     - _chapters/customer_satisfaction.qmd
     - _chapters/references.qmd

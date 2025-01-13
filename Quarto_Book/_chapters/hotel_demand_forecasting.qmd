@@ -6,16 +6,16 @@ The hotel operations of VGT are a significant part of its business and any effic
 
 Hotel demand forecasting is the prediction of the demand for rooms and related hotel services to help a hotel's management team determine pricing, staffing and marketing strategies [@johansson2022]. If the demand for hotel rooms can be reliably forecast then this enables:
 
--   ßDynamic Pricing - Adjust future prices in response to forecast demand. When high demand is expected then future room rates can be increased; when low demand is expected then discounts can be offered or packages can be advertised. And marketing strategies can be determined to respond to the demand forecasts
--   Staffing Levels - Hotel staffing can be adjusted to maintain customer service levels but not over staff when demand is expected to be lower
--   Inventory Management - Similarly inventory can be adjusted, for example catering supplies maintained just sufficient to meet the forecast number of customers using catering facilities.
+-   Dynamic Pricing - Adjust future prices in response to forecast demand. When high demand is expected then future room rates can be increased; when low demand is expected then discounts can be offered or packages can be advertised. And marketing strategies can be determined to respond to the demand forecasts
+-   Staffing Levels - Hotel staffing can be adjusted to maintain customer service levels but not over-staff when demand is expected to be lower
+-   Inventory Management - Similarly inventory can be adjusted, for example catering supplies maintained just sufficient to meet the forecast number of customers.
 
-There are many factors that will influence the demand for hotel rooms, some may remain stable whilst others are less so and will vary over time or in response to external factors, these include:
+There are many factors that will influence the demand for hotel rooms, some may remain stable whilst others are less so and vary over time or in response to external factors, these include:
 
 -   Location & Market - Is the hotel a budget or a boutique hotel? Is is in a business district, near a beach or a ski resort etc. Are customers mainly business travellers or tourists?
 -   Economic - Macro level impact from the state of the economy
 -   Local Competition - Competition with local hotels
--   Seasonality - When are the high and low seasons? Is it a summer or a winter resort? What are the local weather patterns and seasons. Are there weather related attractions?
+-   Seasonality - When are the high and low seasons? Is it a summer or a winter resort? What are the local weather patterns and seasons? Are there weather related attractions?
 -   Local Events - When are any local festivities, sports events, school holidays, religious events, music conferences, business conferences?
 
 ### Occupancy & Revenue Indicators
@@ -41,15 +41,15 @@ To recap, if occupancy (and the associated revenue indicators) can be reliably f
 
 At VGT, no rigorous forecasting is currently in place so to begin with a relatively simple approach will be implemented in a small number of hotels. If the benefits of this are confirmed, then it can then be extended in sophistication using more complex forecasting models and for longer time periods. It can then be implemented across all hotels in VGT.
 
-The objective of this first step is to establish a model that can be used to forecast the daily OCC% at an individual hotel for the coming month, ie the forecast is for 30 to 40 days in the future. The forecast will then be used by hotel's management team to: i) adopt dynamic pricing; ii) execute supporting short-term marketing; iii) fine-tune staffing rotas and holiday leave for the coming weeks. This should improve the efficiency of the hotel's operations by increasing room bookings whilst ensuring staffing costs are controlled at an appropriate level.
+The objective of this first step is to establish a model that can be used to forecast the daily OCC% at an individual hotel for the coming month, ie the forecast is for 30 to 40 days in the future. The forecast will then be used by hotel's management team to: i) adopt dynamic pricing; ii) execute supporting short-term marketing; and iii) fine-tune staffing rotas and holiday leave for the coming weeks. This should improve the efficiency of the hotel's operations by increasing room bookings whilst ensuring staffing costs are controlled at an appropriate level.
 
 ### Forecasting Model & Data Required
 
-The scope of the envisaged forecasting model is to calculate a month of daily OCC% for each room category in an hotel. The output of the forecast model will be provided in spreadsheet form so that the hotel management team can manually make adjustments to try to improve revenue and staffing levels. The actual occupancy and revenue can then be tracked against the forecast throughout the month in order to assess how accurate the forecasting model is and to help refine it.
+The scope of the envisaged forecasting model is to calculate a month of daily OCC% for each room category in an hotel. The output of the forecast model will be provided in spreadsheet form so that the hotel management team can manually make adjustments to improve revenue and staffing levels. The actual occupancy and revenue can then be tracked against the forecast throughout the month in order to assess how accurate the forecasting model is and to help refine it.
 
 *Forecasting Model Data*
 
-The data required for the forecasting model is the last 4 years of daily room occupancy. In this analysis a single hotel with two classes of room (standard and premium) will be used. A 4 year history of daily room bookings was selected with 3 years used for training and 1 year for validation. This length of history was chosen as a starting point because a previous occupancy study [@phumchusri2023] found that the choice could be quite dependent on the scenario; however, there needs to be a a balance of too short and missing seasonality vs too long and not being sufficiently responsive. @phumchusri2023 also found that using 4 years history of daily occupancy to forecast 2 to 8 weeks was a good approach.
+The data required for the forecasting model is the last 4 years of daily room occupancy. In this analysis a single hotel with two classes of room (standard and premium) will be used. A 4 year history of daily room bookings was selected with 3 years used for training and 1 year for testing. This length of history was chosen as a starting point because a previous occupancy study [@phumchusri2023] found that the choice could be quite dependent on the scenario; however, there needs to be a a balance of too short and missing seasonality vs too long and not being sufficiently responsive. @phumchusri2023 also found that using 4 years history of daily occupancy to forecast 2 to 8 weeks was a good approach.
 
 The specific data required is:
 
@@ -57,9 +57,9 @@ The specific data required is:
 -   Daily
 -   Room capacity
 -   Room rate
--   Rooms occupied
+-   Rooms occupied.
 
-*Tracking Spreadsheets*
+*Tracking Spreadsheet*
 
 The data comprising the revenue forecasting and tracking spreadsheet is:
 
@@ -67,14 +67,7 @@ The data comprising the revenue forecasting and tracking spreadsheet is:
 -   Daily room rates by room category that can be manually adjusted
 -   Daily Revenue, ADR, RevPAR (derived from the OCC% and room rates)
 -   Special events, a facility to mark local events that may impact demand. For example, sports events, concerts, conference, unusual weather forecasts
--   Actual OCC%, Revenue, ADR, RevPAR
-
-The data provided for the staffing forecasting spreadsheet is:
-
--   Forecast OCC% (from the forecasting model)
--   Averaged staff requirements per room
--   Staffing levels (derived from the OCC%)
--   Actual staffing levels
+-   Actual OCC%, Revenue, ADR, RevPAR.
 
 ### Techniques Considered
 
@@ -82,7 +75,7 @@ There are several potential tools that can be used with historical time series d
 
 1.  Ordinary Least Squares (OLS) linear regression
 2.  ARIMA, SARIMA - Use to fully incorporate seasonality
-3.  SARIMAX - If exogenous factors need to be accounted for
+3.  SARIMAX - If exogenous factors need to be accounted for.
 
 #### OLS Linear Regression
 
@@ -108,11 +101,11 @@ A dataset was created to simulate the data as defined in the earlier section. Th
 
 ### Time Series Characteristics
 
-The occupancy time series for the two categories of room are shown in the figure below. This indicates that the occupancy has a strong seasonality with an annual peak and trough; there are also regular spikes to full capacity bookings. The premium room occupancy hits maximum and zero occupancy on several occasions.
+The occupancy time series for the two categories of room are shown in the figure below. This indicates that occupancy has a strong seasonality with an annual peak and trough; there are also regular spikes to full capacity bookings. The premium room occupancy hits maximum and zero occupancy on several occasions.
 
 {{< embed ../../Notebooks_Data_Analysis/demand_analysis.ipynb#generated_time_series >}}
 
-The two occupancy time series were examined further (see detail at @sec-Demand_Appendix) using lag plots, ACF plots and ADF tests which indicated autocorrelation, annual seasonality and a positive trend. Differencing was also completed to confirm non-stationarity. Finally a decomposition was completed and this confirmed the seasonality and trend, see the figures below for standard and premium rooms.
+The two occupancy time series were examined further (see detail at @sec-Demand_Appendix) using lag plots, ACF plots and ADF tests which indicated autocorrelation, annual seasonality and a positive trend. Differencing was also completed to confirm non-stationarity. Finally a decomposition was completed and this confirmed seasonality and trend, see the figures below for standard and premium rooms.
 
 {{< embed ../../Notebooks_Data_Analysis/demand_analysis.ipynb#decomposition >}}
 
@@ -122,13 +115,13 @@ The two occupancy time series were examined further (see detail at @sec-Demand_A
 
 ### OLS Linear Regression {#sec-plot}
 
-Given the strong seasonality, linear regression is unlikely to be a good model for forecasting, however a regression fit was calculated to double-check. See the plot below which shows that the fit lines could not reliably provide a forecast and even show a downward trend. And the Durban Watson statistics are less than 2 which confirms evidence of autocorrelation.
+Given the strong seasonality, linear regression is unlikely to be a good model for forecasting, however a regression fit was calculated to double-check. See the plot below which shows that the fit lines could not reliably provide a forecast and even shows a downward trend. The Durban Watson statistics are less than two which confirms evidence of autocorrelation.
 
 {{< embed ../../Notebooks_Data_Analysis/demand_analysis.ipynb#olsregression >}}
 
 ### ARIMA, SARIMA
 
-Given the clear strong seasonality, an ARIMA model was attempted. Parameters for SARIMA were first manually estimated using ACF and PACF plots see figure below and further detail at @sec-Demand_Appendix. This suggested the parameters for SARIMA(p,d,q)(PDW)m should have the values of SARIMA(3,60,1)(3,1,1)365. With m-365 reflecting the daily time-steps having an annual seasonal cycle.
+Given the clear strong seasonality, an ARIMA model was not attempted. Parameters for SARIMA were first manually estimated using ACF and PACF plots see figure below and further detail at @sec-Demand_Appendix. This suggested the parameters for SARIMA(p,d,q)(PDW)m should have the values of SARIMA(3,60,1)(3,1,1)365. With m=365 reflecting daily time-steps and an annual seasonal cycle.
 
 {{< embed ../../Notebooks_Data_Analysis/demand_analysis_sarima.ipynb#PACF-plot >}}
 
@@ -156,7 +149,7 @@ Several attempts were made to create a SARIMA model, however processing capacity
 
 ### Next Steps
 
-The next steps are primarily to refine the SARIMA and then explore the use of SARIMAX.
+The next steps are primarily to refine the SARIMA model and then explore the use of SARIMAX.
 
 The main task in establishing an accurate SARIMA model is to obtain sufficient processing capacity in order to use AUTO ARIMA with a seasonal parameter of 365 and then refine this to achieve an accurate evaluation using the one year test data.
 
